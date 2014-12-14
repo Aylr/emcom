@@ -1,0 +1,46 @@
+EMCOM Schema
+    user
+        id
+        name
+        login
+        password
+    locations
+        id
+        status id
+        name
+        description
+        GIS lat/lon
+    statuses
+        id
+            active
+            emergency
+            closed
+            opening
+            CERT online
+            Red Cross online
+    messages
+        id
+        parent id
+        user id
+        subject
+        content
+        timestamp
+        unread (new notification)
+    files
+        id
+        uploading location id
+        user id
+        file data
+        filename
+        description
+        timestamp
+        mark as deleted
+    public board
+        (... could clone/reuse the messages data table and simply not use the threading)
+    permissions
+        id
+        permission
+        description
+    user_permissions
+        user id
+        permission id
